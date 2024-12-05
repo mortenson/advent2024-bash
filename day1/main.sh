@@ -5,7 +5,7 @@ RIGHT=$(cat input.txt | awk '{ print $2 }' | sort)
 
 i=0
 TOTAL=0
-IFS=$'\n' RIGHTLINES=($RIGHT)
+RIGHTLINES=($RIGHT)
 echo "$LEFT" | while read p; do
   DIFF=$((p - ${RIGHTLINES[$i]}))
   DIFF=${DIFF#-}
